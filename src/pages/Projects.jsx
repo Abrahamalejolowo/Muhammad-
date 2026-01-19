@@ -1,18 +1,12 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
-// Images
-import MohAutos from "../image/MohAutos.png";
-import Purity from "../image/Purity.png";
-import Listify from "../image/Listify.png";
-import Lumina from "../image/Lumina.png";
-
 /* =======================
-   PROJECT DATA (LOCAL)
+   PROJECT DATA
 ======================= */
 const projectPage = [
   {
-    img: MohAutos,
+    img: "src/Image/MohAutos.png",
     title: "MohAutos",
     description:
       "A complete car sales platform that allows users to browse, view, and purchase cars with a clean, modern, and user-friendly interface.",
@@ -21,7 +15,7 @@ const projectPage = [
     github: "https://github.com/Abrahamalejolowo/moh-autos.git",
   },
   {
-    img: Purity,
+    img: "src/Image/Purity.png",
     title: "Purity",
     description:
       "A modern and responsive admin dashboard designed to display analytics, manage data, and provide clear insights through a clean UI.",
@@ -30,7 +24,7 @@ const projectPage = [
     github: "https://github.com/devsamahd/purity-ui-dashboard.git",
   },
   {
-    img: Listify,
+    img: "src/Image/Listify.png",
     title: "Listify",
     description:
       "A modern task management web app designed to help users organize tasks efficiently with a clean UI and smooth user experience.",
@@ -39,7 +33,7 @@ const projectPage = [
     github: "https://github.com/Abrahamalejolowo/listify.git",
   },
   {
-    img: Lumina,
+    img: "src/Image/Lumina.png",
     title: "Lumina",
     description:
       "A modern e-commerce web app designed to provide a seamless shopping experience with a clean UI and intuitive navigation.",
@@ -49,9 +43,6 @@ const projectPage = [
   },
 ];
 
-/* =======================
-   COMPONENT
-======================= */
 export default function Projects() {
   return (
     <section id="projects" className="py-24 bg-[#F8FAFC]">
@@ -68,13 +59,11 @@ export default function Projects() {
               whileHover={{ y: -6, scale: 1.03 }}
               transition={{ type: "spring", stiffness: 260 }}
             >
-              {project.img && (
-                <img
-                  src={project.img}
-                  alt={project.title}
-                  className="w-full h-48 object-cover rounded-lg mb-4"
-                />
-              )}
+              <img
+                src={project.img}
+                alt={project.title}
+                className="w-full h-48 object-cover rounded-lg mb-4"
+              />
 
               <h4 className="font-semibold text-lg mb-2 text-[#111827]">
                 {project.title}
@@ -100,7 +89,10 @@ export default function Projects() {
                   <SocialIcon icon={FaGithub} link={project.github} />
                 )}
                 {project.live && (
-                  <SocialIcon icon={FaExternalLinkAlt} link={project.live} />
+                  <SocialIcon
+                    icon={FaExternalLinkAlt}
+                    link={project.live}
+                  />
                 )}
               </div>
             </motion.div>
@@ -122,9 +114,6 @@ export default function Projects() {
   );
 }
 
-/* =======================
-   ICON COMPONENT
-======================= */
 function SocialIcon({ icon: Icon, link }) {
   return (
     <motion.a
