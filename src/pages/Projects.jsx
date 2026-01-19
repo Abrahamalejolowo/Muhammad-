@@ -1,7 +1,57 @@
-import { projectPage } from "../data/Database";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
+// Images
+import MohAutos from "../image/MohAutos.png";
+import Purity from "../image/Purity.png";
+import Listify from "../image/Listify.png";
+import Lumina from "../image/Lumina.png";
+
+/* =======================
+   PROJECT DATA (LOCAL)
+======================= */
+const projectPage = [
+  {
+    img: MohAutos,
+    title: "MohAutos",
+    description:
+      "A complete car sales platform that allows users to browse, view, and purchase cars with a clean, modern, and user-friendly interface.",
+    tech: ["React", "Tailwind CSS", "Firebase"],
+    live: "",
+    github: "https://github.com/Abrahamalejolowo/moh-autos.git",
+  },
+  {
+    img: Purity,
+    title: "Purity",
+    description:
+      "A modern and responsive admin dashboard designed to display analytics, manage data, and provide clear insights through a clean UI.",
+    tech: ["React", "Tailwind CSS"],
+    live: "https://github.com/devsamahd/purity-ui-dashboard",
+    github: "https://github.com/devsamahd/purity-ui-dashboard.git",
+  },
+  {
+    img: Listify,
+    title: "Listify",
+    description:
+      "A modern task management web app designed to help users organize tasks efficiently with a clean UI and smooth user experience.",
+    tech: ["React", "Tailwind CSS"],
+    live: "https://listify-gilt.vercel.app",
+    github: "https://github.com/Abrahamalejolowo/listify.git",
+  },
+  {
+    img: Lumina,
+    title: "Lumina",
+    description:
+      "A modern e-commerce web app designed to provide a seamless shopping experience with a clean UI and intuitive navigation.",
+    tech: ["React", "Tailwind CSS"],
+    live: "https://lumina-p.netlify.app/",
+    github: "https://github.com/Abrahamalejolowo/lumina.git",
+  },
+];
+
+/* =======================
+   COMPONENT
+======================= */
 export default function Projects() {
   return (
     <section id="projects" className="py-24 bg-[#F8FAFC]">
@@ -14,9 +64,9 @@ export default function Projects() {
           {projectPage.map((project) => (
             <motion.div
               key={project.title}
-              className="bg-white rounded-xl p-6 border hover:shadow-lg transition cursor-pointer"
-              whileHover={{ y: -5, scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 300 }}
+              className="bg-white rounded-xl p-6 border hover:shadow-lg transition"
+              whileHover={{ y: -6, scale: 1.03 }}
+              transition={{ type: "spring", stiffness: 260 }}
             >
               {project.img && (
                 <img
@@ -45,17 +95,26 @@ export default function Projects() {
                 ))}
               </div>
 
-              <div className="flex gap-6 text-[#2563EB] font-medium items-center">
-                <SocialIcon icon={FaGithub} link={project.github} />
-                <SocialIcon icon={FaExternalLinkAlt} link={project.live} />
+              <div className="flex gap-6 items-center">
+                {project.github && (
+                  <SocialIcon icon={FaGithub} link={project.github} />
+                )}
+                {project.live && (
+                  <SocialIcon icon={FaExternalLinkAlt} link={project.live} />
+                )}
               </div>
             </motion.div>
           ))}
         </div>
 
-        <div className="mt-8 text-center">
-          <a href="https://github.com/mohman8" className="font-bold text-blue-600 hover:underline">
-            See more
+        <div className="mt-10 text-center">
+          <a
+            href="https://github.com/Abrahamalejolowo"
+            className="font-bold text-blue-600 hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            See more on GitHub →
           </a>
         </div>
       </div>
@@ -63,6 +122,9 @@ export default function Projects() {
   );
 }
 
+/* =======================
+   ICON COMPONENT
+======================= */
 function SocialIcon({ icon: Icon, link }) {
   return (
     <motion.a
@@ -71,7 +133,7 @@ function SocialIcon({ icon: Icon, link }) {
       rel="noopener noreferrer"
       whileHover={{ scale: 1.25, y: -6 }}
       transition={{ type: "spring", stiffness: 300 }}
-      className="text-black text-2xl sm:text-3xl cursor-pointer"
+      className="text-black text-2xl cursor-pointer"
     >
       <Icon />
     </motion.a>
