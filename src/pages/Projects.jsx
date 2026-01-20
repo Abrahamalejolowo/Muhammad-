@@ -1,12 +1,16 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import MohAutos from "../Image/MohAutos.png";
+import Purity from "../Image/Purity.png";
+import Lumina from "../Image/Lumina.png";
+import Listify from "../Image/Listify.png";
 
 /* =======================
    PROJECT DATA
 ======================= */
 const projectPage = [
   {
-    img: "src/Image/MohAutos.png",
+    img: MohAutos,
     title: "MohAutos",
     description:
       "A complete car sales platform that allows users to browse, view, and purchase cars with a clean, modern, and user-friendly interface.",
@@ -15,7 +19,7 @@ const projectPage = [
     github: "https://github.com/Abrahamalejolowo/moh-autos.git",
   },
   {
-    img: "src/Image/Purity.png",
+    img: Purity,
     title: "Purity",
     description:
       "A modern and responsive admin dashboard designed to display analytics, manage data, and provide clear insights through a clean UI.",
@@ -24,7 +28,7 @@ const projectPage = [
     github: "https://github.com/devsamahd/purity-ui-dashboard.git",
   },
   {
-    img: "src/Image/Listify.png",
+    img: Listify,
     title: "Listify",
     description:
       "A modern task management web app designed to help users organize tasks efficiently with a clean UI and smooth user experience.",
@@ -33,7 +37,7 @@ const projectPage = [
     github: "https://github.com/Abrahamalejolowo/listify.git",
   },
   {
-    img: "src/Image/Lumina.png",
+    img: Lumina,
     title: "Lumina",
     description:
       "A modern e-commerce web app designed to provide a seamless shopping experience with a clean UI and intuitive navigation.",
