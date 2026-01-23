@@ -5,9 +5,7 @@ import Purity from "../Image/Purity.png";
 import Lumina from "../Image/Lumina.png";
 import Listify from "../Image/Listify.png";
 
-/* =======================
-   PROJECT DATA
-======================= */
+
 const projectPage = [
   {
     img: MohAutos,
@@ -103,20 +101,21 @@ export default function Projects() {
           ))}
         </div>
 
-        <div className="mt-10 text-center">
+        <div className="mt-10 ">
           <a
-            href="https://github.com/Abrahamalejolowo"
+            href="https://github.com/imammuhammadmuhideen"
             className="font-bold text-blue-600 hover:underline"
             target="_blank"
             rel="noopener noreferrer"
           >
-            See more on GitHub →
+            See more on GitHub
           </a>
         </div>
       </div>
     </section>
   );
 }
+
 
 function SocialIcon({ icon: Icon, link }) {
   return (
