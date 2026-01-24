@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import MohAutos from "../Image/MohAutos.png";
-import Purity from "../Image/Purity.png";
-import Lumina from "../Image/Lumina.png";
-import Listify from "../Image/Listify.png";
+import MohAutos from "../image/MohAutos.png";
+import Purity from "../image/Purity.png";
+import Lumina from "../image/Lumina.png";
+import Listify from "../image/Listify.png";
 
 
 const projectPage = [
